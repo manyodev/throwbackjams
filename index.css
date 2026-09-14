@@ -37,6 +37,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  cursor: pointer;
 }
 
 .marquee {
@@ -70,17 +71,82 @@ body {
 main {
   flex: 1;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr;
 }
 .main1 {
   background-color: var(--brand-blue-dark);
   color: white;
 }
-
-.main2 {
-  background-color: var(--brand-blue-light);
+.main1a {
+  background-color: white;
 }
-
+.main1aIMG {
+  background-color: black;
+  margin: 2px;
+  height: 250px;
+}
+.main1aBanner {
+  background-color: var(--brand-yellow);
+  color: var(--brand-red);
+  /* positon on top of img*/
+}
+.main1b {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: red;
+}
+.main1bName {
+  background-color: var(--brand-blue-light);
+  padding: 4px;
+}
+.nameTitle {
+  font-size: 25px;
+}
+.nameSubTitle {
+}
+.main1bDesc {
+  padding: 4px;
+}
+.main2 {
+  background-color: var(--brand-blue-dark);
+  padding: 10px;
+}
+.tickets {
+  background-color: white;
+  color: red;
+  padding: 10px;
+  text-align: center;
+}
+.ticketsTitle {
+  background-color: var(--brand-blue);
+  padding: 4px;
+  font-size: x-large;
+}
+.ticketsSubTitle {
+  background-color: var(--brand-blue-light);
+  margin-bottom: 2px;
+  padding: 2px;
+}
+.ticketsPrices {
+  background-color: var(--brand-blue-light);
+  display: block;
+  margin-bottom: 2px;
+  padding: 2px;
+  font-size: larger;
+}
+.eventBrite {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 4px;
+  margin-top: 10px;
+}
+.eventBrite > button {
+  cursor: pointer;
+  background-color: var(--brand-yellow);
+  color: red;
+  border-radius: 5px;
+}
 .main3 {
   background-color: var(--brand-blue);
   color: white;
@@ -114,6 +180,6 @@ main {
   width: 100%;
 }
 footer {
-  background-color: black;
-  color: white;
+  background-color: var(--brand-blue-dark);
+  color: var(--brand-yellow);
 }
