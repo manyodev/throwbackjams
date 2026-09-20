@@ -20,16 +20,31 @@ body {
   color: white;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  padding: 20px;
 }
 .headerTitle {
+  font-size: 50px;
   color: var(--brand-yellow);
+  border-top: 20px solid red;
+  border-bottom: 20px solid red;
+  display: flex;
+  justify-content: center;
 }
 .headerImg {
   color: white;
+  border-top: 20px solid var(--brand-blue);
+  border-bottom: 20px solid var(--brand-blue);
+  display: flex;
+  justify-content: center;
 }
 .headerSNS {
   color: var(--brand-red);
+  border-top: 20px solid var(--brand-blue);
+  border-bottom: 20px solid var(--brand-blue);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.headerSNS > i {
 }
 .navbar {
   background-color: var(--brand-blue-light);
@@ -77,6 +92,9 @@ main {
 .main1 {
   background-color: var(--brand-blue-dark);
   color: white;
+  padding-top: 10px;
+  padding-left: 10px;
+  position: relative;
 }
 .main1a {
   background-color: white;
@@ -90,6 +108,9 @@ main {
   background-color: var(--brand-yellow);
   color: var(--brand-red);
   /* positon on top of img*/
+  position: absolute;
+  top: 5px;
+  left: 30px;
 }
 .main1b {
   display: grid;
