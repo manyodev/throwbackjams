@@ -44,17 +44,23 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-.headerSNS > i {
-}
+
 .navbar {
   background-color: var(--brand-blue-light);
   color: var(--brand-red);
   display: flex;
-  justify-content: space-around;
-  padding: 10px;
+  justify-content: center;
+}
+.navbar > div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   cursor: pointer;
 }
-
+.navbar > div:hover {
+  background-color: var(--brand-blue);
+}
 .marquee {
   background-color: black;
   color: white;
@@ -159,7 +165,6 @@ main {
 .eventBrite {
   display: flex;
   justify-content: center;
-  background-color: white;
   padding: 4px;
   margin-top: 10px;
 }
@@ -168,6 +173,7 @@ main {
   background-color: var(--brand-yellow);
   color: red;
   border-radius: 5px;
+  font-size: 1.5rem;
 }
 .main3 {
   background-color: var(--brand-blue);
@@ -185,6 +191,12 @@ main {
   display: flex;
   margin: 10px;
   color: red;
+  transition: transform 0.5s;
+}
+.year:hover,
+.headerSNS > a:hover {
+  transform: scale(1.1, 1.1);
+  cursor: pointer;
 }
 .yearImg {
   width: 30%;
