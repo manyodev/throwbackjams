@@ -242,4 +242,81 @@ main {
 footer {
   background-color: var(--brand-blue-dark);
   color: var(--brand-yellow);
+  padding: 10px;
+}
+
+@media (max-width: 760px) {
+  .header {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .headerTitle {
+    grid-column: 1;
+    grid-row: 1;
+    align-items: center;
+    border-width: 12px 0;
+    font-size: 2rem;
+  }
+
+  .headerImgCont {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 8rem;
+  }
+
+  .headerSNS {
+    grid-column: 1;
+    grid-row: 2;
+    border-width: 10px 0;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar > div {
+    padding: 10px 12px;
+  }
+
+  main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .main1 {
+    justify-self: stretch;
+    padding: 10px;
+  }
+
+  .main1a {
+    width: 100%;
+  }
+
+  .main3 {
+    min-width: 0;
+  }
+
+  .yearImg {
+    flex: 0 0 30%;
+    min-height: 4rem;
+  }
+
+  .yearText {
+    flex: 1;
+    min-width: 0;
+    width: auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .headerTitle {
+    font-size: 1.65rem;
+  }
+
+  .main1b {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .navbar > div {
+    padding: 8px 10px;
+  }
 }
