@@ -4,6 +4,7 @@
   --brand-blue-light: #6c91d9;
   --brand-yellow: #ffd41d;
   --brand-red: #be1211;
+  --gold: #b89a56;
 }
 
 html,
@@ -13,6 +14,8 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
+  background-color: var(--brand-blue-dark);
+  font-family: "Cousine", sans-serif;
 }
 
 .header {
@@ -21,7 +24,11 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
 }
+
 .headerTitle {
+  font-family: "BBH Hegarty", sans-serif;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 2px var(--gold);
   font-size: 50px;
   color: var(--brand-yellow);
   border-top: 20px solid red;
@@ -29,12 +36,22 @@ body {
   display: flex;
   justify-content: center;
 }
+a {
+  text-decoration: none;
+}
+.headerImgCont {
+  position: relative;
+}
 .headerImg {
-  color: white;
-  border-top: 20px solid var(--brand-blue);
-  border-bottom: 20px solid var(--brand-blue);
+  position: absolute;
+  inset: 0;
   display: flex;
-  justify-content: center;
+}
+.headerImg > img {
+  width: 50%;
+  min-width: 0;
+  height: 100%;
+  object-fit: cover;
 }
 .headerSNS {
   color: var(--brand-red);
@@ -44,18 +61,23 @@ body {
   justify-content: space-around;
   align-items: center;
 }
-
+.headerSNS > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+}
 .navbar {
   background-color: var(--brand-blue-light);
   color: var(--brand-red);
   display: flex;
   justify-content: center;
+  font-family: "Gabarito", sans-serif;
+  text-transform: capitalize;
+  text-shadow: 1px 1px var(--gold);
 }
 .navbar > div {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 10px 20px;
   cursor: pointer;
 }
 .navbar > div:hover {
@@ -84,7 +106,7 @@ body {
 }
 /* accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .marquee-content {
+  .marqueeContent {
     animation: none;
     padding-left: 0;
     white-space: normal;
@@ -101,19 +123,24 @@ main {
   padding-top: 10px;
   padding-left: 10px;
   position: relative;
+  justify-self: center;
 }
 .main1a {
   background-color: white;
+  width: 80%;
 }
 .main1aIMG {
   background-color: black;
-  margin: 2px;
-  height: 250px;
+  overflow: hidden;
+}
+.main1aIMG > img {
+  width: 100%;
+  height: auto;
 }
 .main1aBanner {
   background-color: var(--brand-yellow);
   color: var(--brand-red);
-  /* positon on top of img*/
+
   position: absolute;
   top: 5px;
   left: 30px;
@@ -131,6 +158,7 @@ main {
   font-size: 25px;
 }
 .nameSubTitle {
+  font-family: "Courier New", Courier, monospace;
 }
 .main1bDesc {
   padding: 4px;
@@ -157,7 +185,6 @@ main {
 }
 .ticketsPrices {
   background-color: var(--brand-blue-light);
-  display: block;
   margin-bottom: 2px;
   padding: 2px;
   font-size: larger;
@@ -200,7 +227,6 @@ main {
 }
 .yearImg {
   width: 30%;
-  height: auto;
   background-image: url("images/heroImage.jpeg");
   background-size: cover;
   background-position: center;
